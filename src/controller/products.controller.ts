@@ -6,5 +6,11 @@ const createProductController = async (req: Request, res: Response): Promise<Res
   return res.status(201).json(newProduct);
 };
 
+const listAllProducts = async (req: Request, res: Response): Promise<Response | void> => {
+  const allProducts = await ProductsService.getAllProducts();
+  return res.status(200).json(allProducts);
+};
+
 export default {
-  createProductController };
+  createProductController,
+  listAllProducts };
