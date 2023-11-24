@@ -14,4 +14,10 @@ describe('ProductsService', function () {
     expect(newProduct).to.be.an('object');
   });
 
+  it('Testa a função getAllProducts', async function () {
+
+    const newProduct = await productsService.getAllProducts();
+
+    expect(newProduct).to.be.an('array');
+  });
 });

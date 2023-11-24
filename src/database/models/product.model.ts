@@ -8,7 +8,7 @@ export type ProductInputtableTypes = Optional<Product, 'id'>;
 type ProductSequelizeModelCreator = ModelDefined<Product, ProductInputtableTypes>;
 export type ProductSequelizeModel = Model<Product, ProductInputtableTypes>;
 
-const ProductModel: ProductSequelizeModelCreator = db.define('Product', {
+const ProductModel: ProductSequelizeModelCreator = db.define<ProductSequelizeModel>('Product', {
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
     primaryKey: true,

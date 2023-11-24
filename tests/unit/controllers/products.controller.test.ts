@@ -31,4 +31,5 @@ describe('ProductsController', function () {
     expect(res.json).to.have.been.calledWith(serviceResponse);
 
 });
+
 });

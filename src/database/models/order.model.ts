@@ -6,7 +6,7 @@ type OrderInputtableTypes = Optional<Order, 'id'>;
 type OrderSequelizeModelCreator = ModelDefined<Order, OrderInputtableTypes>;
 export type OrderSequelizeModel = Model<Order, OrderInputtableTypes>;
 
-const OrderModel: OrderSequelizeModelCreator = db.define('Order', {
+const OrderModel: OrderSequelizeModelCreator = db.define<OrderSequelizeModel>('Order', {
   id: {
     type: DataTypes.INTEGER.UNSIGNED,
     primaryKey: true,
